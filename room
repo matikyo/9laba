@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+
+public class Room {
+    private ArrayList<furniture> masFur = new ArrayList<furniture>();
+
+    public void addFur(furniture m){
+        masFur.add(m);
+    }
+
+    public void removeFur(furniture m){
+        masFur.remove(m);
+    }
+
+    public Room(){
+    }
+
+    public Boolean findFur(furniture m){
+        return masFur.contains(m);
+    }
+
+    public Room(ArrayList< furniture> n){
+        masFur=n;
+    }
+
+    public void printRoom() {
+        System.out.println("В комнате: ");
+        for (furniture a:masFur){
+            System.out.println("\t"+a.toString());
+            if (a instanceof Cupboard) {
+                System.out.println("    Это шкаф");
+                System.out.println();
+            }
+            if (a instanceof Table) {
+                System.out.println("    Это стол");
+                System.out.println();
+            }
+        }
+    }
+}
