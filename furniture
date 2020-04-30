@@ -1,0 +1,52 @@
+public class furniture {
+    private String firma;
+    private int width;
+    private int length;
+    private int height;
+
+    public void setFirma(String name){
+        firma = name;
+    }
+
+    public void setWidth(int w){
+        width = w;
+    }
+
+    public void setLength(int l){
+        width = l;
+    }
+
+    public void setHeight(int h){
+        width = h;
+    }
+
+    public String getFirma(){
+        return firma;
+    }
+
+    public int getWidth(){
+        return width;
+    }
+
+    public int getLength(){
+        return length;
+    }
+
+    public int getHeight(){
+        return height;
+    }
+    public furniture(){
+        firma = "Без названия";
+        width = 0;
+        length = 0;
+        height = 0;
+
+    }
+
+    public furniture(String name, int w, int l, int h ){ 
+        firma = name;
+        width = w;
+        length = l;
+        height = h;
+    }
+}
